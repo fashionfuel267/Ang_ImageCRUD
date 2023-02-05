@@ -1,0 +1,58 @@
+<form [formGroup]="menuForm" (ngSubmit)="onSubmit()">
+    
+    <p>
+        <label for="InstituteId">Institute  </label>
+        <select id="InstituteId" name="InstituteId" formControlName="InstituteId">
+          <option value="0" selected>Select Institute</option>
+          <option value="item.Id" *ngFor="let item of insLst">{{item.InstituteName}}</option>
+        
+        </select>
+      </p>
+     <p>
+<label>banner</label>
+<input type="file" name="Banner" (change)="selectbannerFile($event)"  #bannerfile>
+    </p>
+    <p>
+      <label for="MenuTitle">Title  </label>
+      <input type="text" id="MenuTitle" name="MenuTitle" formControlName="MenuTitle">
+    </p>
+   
+    <p>
+      <label for="lastname">Menu Description </label>
+      <input type="text" id="MenuDescription" name="MenuDescription" formControlName="MenuDescription" >
+    </p>
+   
+    <p>
+      <label for="email">Parent Menu </label>
+      
+      <select id="ParentId" name="ParentId" formControlName="ParentId">
+        <option value="0">Select Parent Menu</option>
+     
+      </select>
+    </p>
+   
+    <!-- <p>
+      <label for="gender">DomainName </label>
+      <input type="radio" value="male" id="gender" name="gender"> Male
+      <input type="radio" value="female" id="gender" name="gender"> Female
+    </p>
+    -->
+    <p>
+      <label for="DomainName">DomainName </label>
+      <input type="text" id="DomainName" name="DomainName" formControlName="DomainName">
+    </p>
+  
+      <p>
+        <label for="IP">IP </label>
+        <input type="text" id="IP" name="IP" formControlName="IP">
+      </p>
+      <p>
+        <label for="isMarried">IsActive </label>
+        <input type="checkbox" id="IsActive" name="IsActive" formControlName="IsActive">
+      </p>
+
+    <p>
+      <button type="submit">Submit</button>
+    </p>
+   
+  </form>
