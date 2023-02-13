@@ -24,7 +24,7 @@ this.menuForm=new FormGroup({
     })
 
 }
-selectbannerFile(event:File){
+selectbannerFile(event:any){
 console.log(event)
 }
 ngOnInit(): void {
